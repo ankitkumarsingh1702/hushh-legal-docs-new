@@ -89,20 +89,20 @@ export default function DocumentViewer({ policyType }: DocumentViewerProps) {
   const formatContent = (content: string) => {
     return content.split('\n').map((line, index) => {
       if (line.startsWith('# ')) {
-        return <h2 key={index} className="text-2xl font-bold text-gray-900 mb-4 pb-2 border-b border-gray-200 mt-12 first:mt-0">{line.replace('# ', '')}</h2>;
+        return <h2 key={index} className="text-3xl font-bold text-gradient mb-6 pb-3 border-b border-border mt-12 first:mt-0">{line.replace('# ', '')}</h2>;
       }
       if (line.startsWith('## ')) {
-        return <h3 key={index} className="text-xl font-semibold text-gray-900 mb-3 mt-8">{line.replace('## ', '')}</h3>;
+        return <h3 key={index} className="text-2xl font-semibold text-foreground mb-4 mt-10">{line.replace('## ', '')}</h3>;
       }
       if (line.startsWith('### ')) {
-        return <h4 key={index} className="text-lg font-semibold text-gray-900 mb-2 mt-6">{line.replace('### ', '')}</h4>;
+        return <h4 key={index} className="text-xl font-semibold text-primary mb-3 mt-8">{line.replace('### ', '')}</h4>;
       }
       if (line.startsWith('#### ')) {
-        return <h5 key={index} className="text-base font-semibold text-gray-900 mb-2 mt-4">{line.replace('#### ', '')}</h5>;
+        return <h5 key={index} className="text-lg font-semibold text-foreground mb-3 mt-6">{line.replace('#### ', '')}</h5>;
       }
       if (line.startsWith('- ')) {
         return (
-          <li key={index} className="text-gray-700 mb-1 ml-4">
+          <li key={index} className="text-muted-foreground mb-2 ml-6 relative before:content-['→'] before:absolute before:-left-4 before:text-primary">
             {line.replace('- ', '')}
           </li>
         );
@@ -113,44 +113,44 @@ export default function DocumentViewer({ policyType }: DocumentViewerProps) {
       
       // Handle links and emphasized text
       const formattedLine = line
-        .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
-        .replace(/\*(.*?)\*/g, '<em>$1</em>');
+        .replace(/\*\*(.*?)\*\*/g, '<strong class="text-primary font-semibold">$1</strong>')
+        .replace(/\*(.*?)\*/g, '<em class="text-foreground/90 italic">$1</em>');
       
       return (
-        <p key={index} className="text-gray-700 leading-relaxed mb-4" 
+        <p key={index} className="text-muted-foreground leading-relaxed mb-4 text-base" 
            dangerouslySetInnerHTML={{ __html: formattedLine }} />
       );
     });
   };
 
   return (
-    <div className="max-w-4xl mx-auto p-6 lg:p-8">
+    <div className="max-w-5xl mx-auto p-6 lg:p-8">
       {/* Document Header */}
-      <div className="mb-8">
-        <div className="flex items-center mb-4">
-          <div className={`w-12 h-12 bg-${colorClass}-100 rounded-lg flex items-center justify-center mr-4`}>
-            <IconComponent className={`text-${colorClass}-600 text-xl w-6 h-6`} />
+      <div className="mb-10">
+        <div className="flex items-center mb-6">
+          <div className="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center mr-6 shadow-lg">
+            <IconComponent className="text-primary w-8 h-8" />
           </div>
           <div>
-            <h1 className="text-3xl font-bold text-gray-900 mb-2">{policy.title}</h1>
-            <p className="text-gray-600">
-              Effective Date: <span className="font-medium">{policy.effectiveDate}</span>
-              <span className="mx-2">•</span>
-              Last Updated: <span className="font-medium">{policy.lastUpdated}</span>
+            <h1 className="text-4xl font-bold text-gradient mb-3">{policy.title}</h1>
+            <p className="text-muted-foreground text-lg">
+              Effective Date: <span className="font-semibold text-primary">{policy.effectiveDate}</span>
+              <span className="mx-3">•</span>
+              Last Updated: <span className="font-semibold text-primary">{policy.lastUpdated}</span>
             </p>
           </div>
         </div>
 
         {/* Quick Navigation */}
         {quickNavSections.length > 0 && (
-          <Card className="bg-blue-50 border-blue-200 p-4">
-            <h3 className="font-semibold text-blue-900 mb-2">Quick Navigation</h3>
-            <div className="flex flex-wrap gap-2">
+          <Card className="card-gradient p-6 border-primary/20">
+            <h3 className="font-semibold text-primary mb-4 text-lg">Quick Navigation</h3>
+            <div className="flex flex-wrap gap-3">
               {quickNavSections.map((section, index) => (
                 <Badge
                   key={index}
                   variant="outline"
-                  className="bg-white border-blue-200 text-blue-700 hover:bg-blue-100 cursor-pointer"
+                  className="bg-card/50 border-primary/30 text-foreground hover:bg-primary/10 cursor-pointer px-4 py-2 text-sm transition-all duration-200 hover:scale-105"
                   onClick={() => {
                     const element = document.querySelector(`h2:nth-of-type(${index + 1})`);
                     element?.scrollIntoView({ behavior: 'smooth' });
@@ -166,57 +166,64 @@ export default function DocumentViewer({ policyType }: DocumentViewerProps) {
 
       {/* Document Content */}
       <div className="prose prose-lg max-w-none">
-        <div className="space-y-4">
-          {formatContent(policy.content)}
-        </div>
+        <Card className="card-gradient p-8 border-border/50">
+          <div className="space-y-6">
+            {formatContent(policy.content)}
+          </div>
+        </Card>
       </div>
 
       {/* Your Rights Section for Privacy Policy */}
       {policy.type === 'privacy-policy' && (
         <div className="mt-12">
-          <h2 className="text-2xl font-bold text-gray-900 mb-4 pb-2 border-b border-gray-200">Your Rights and Choices</h2>
-          <div className="grid md:grid-cols-3 gap-4 mb-6">
-            <Card className="text-center p-4 bg-blue-50 border-blue-200">
-              <Eye className="text-blue-600 text-2xl mb-2 w-8 h-8 mx-auto" />
-              <h4 className="font-semibold text-blue-900">Access</h4>
-              <p className="text-blue-800 text-sm">View the personal information we have about you</p>
+          <h2 className="text-3xl font-bold text-gradient mb-6 pb-3 border-b border-border">Your Rights and Choices</h2>
+          <div className="grid md:grid-cols-3 gap-6 mb-8">
+            <Card className="text-center p-6 card-gradient border-primary/20 hover:border-primary/40 transition-all duration-300 hover:scale-105">
+              <Eye className="text-primary w-10 h-10 mx-auto mb-4" />
+              <h4 className="font-semibold text-primary text-lg mb-2">Access</h4>
+              <p className="text-muted-foreground">View the personal information we have about you</p>
             </Card>
             
-            <Card className="text-center p-4 bg-green-50 border-green-200">
-              <Edit className="text-green-600 text-2xl mb-2 w-8 h-8 mx-auto" />
-              <h4 className="font-semibold text-green-900">Correct</h4>
-              <p className="text-green-800 text-sm">Update or correct your personal information</p>
+            <Card className="text-center p-6 card-gradient border-green-500/20 hover:border-green-500/40 transition-all duration-300 hover:scale-105">
+              <Edit className="text-green-400 w-10 h-10 mx-auto mb-4" />
+              <h4 className="font-semibold text-green-400 text-lg mb-2">Correct</h4>
+              <p className="text-muted-foreground">Update or correct your personal information</p>
             </Card>
             
-            <Card className="text-center p-4 bg-red-50 border-red-200">
-              <Trash2 className="text-red-600 text-2xl mb-2 w-8 h-8 mx-auto" />
-              <h4 className="font-semibold text-red-900">Delete</h4>
-              <p className="text-red-800 text-sm">Request deletion of your personal data</p>
+            <Card className="text-center p-6 card-gradient border-red-500/20 hover:border-red-500/40 transition-all duration-300 hover:scale-105">
+              <Trash2 className="text-red-400 w-10 h-10 mx-auto mb-4" />
+              <h4 className="font-semibold text-red-400 text-lg mb-2">Delete</h4>
+              <p className="text-muted-foreground">Request deletion of your personal data</p>
             </Card>
           </div>
         </div>
       )}
 
       {/* Document Footer */}
-      <div className="border-t border-gray-200 pt-6 mt-12">
-        <div className="flex flex-col md:flex-row justify-between items-start md:items-center">
-          <div className="mb-4 md:mb-0">
-            <p className="text-sm text-gray-600">
-              This document was last updated on{" "}
-              <span className="font-medium">{policy.lastUpdated}</span>
-            </p>
+      <div className="border-t border-border pt-8 mt-16">
+        <Card className="card-gradient p-6">
+          <div className="flex flex-col md:flex-row justify-between items-start md:items-center">
+            <div className="mb-4 md:mb-0">
+              <p className="text-muted-foreground">
+                This document was last updated on{" "}
+                <span className="font-semibold text-primary">{policy.lastUpdated}</span>
+              </p>
+              <p className="text-sm text-muted-foreground/70 mt-2">
+                For questions: <span className="text-primary">info@hush1one.com</span> | <span className="text-primary">+14252969050</span>
+              </p>
+            </div>
+            <div className="flex space-x-4">
+              <Button variant="outline" size="sm" className="border-primary/30 hover:bg-primary/10 transition-all duration-200">
+                <Printer className="w-4 h-4 mr-2" />
+                Print
+              </Button>
+              <Button variant="outline" size="sm" className="border-primary/30 hover:bg-primary/10 transition-all duration-200">
+                <Download className="w-4 h-4 mr-2" />
+                Download PDF
+              </Button>
+            </div>
           </div>
-          <div className="flex space-x-4">
-            <Button variant="outline" size="sm" className="text-sm">
-              <Printer className="w-4 h-4 mr-1" />
-              Print
-            </Button>
-            <Button variant="outline" size="sm" className="text-sm">
-              <Download className="w-4 h-4 mr-1" />
-              Download PDF
-            </Button>
-          </div>
-        </div>
+        </Card>
       </div>
     </div>
   );

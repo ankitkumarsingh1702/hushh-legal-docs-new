@@ -65,38 +65,38 @@ export default function Sidebar({ currentPolicy, onPolicyChange, onClose }: Side
   }
 
   return (
-    <aside className="w-64 bg-white shadow-lg h-full flex flex-col">
+    <aside className="w-72 glass-effect shadow-2xl h-full flex flex-col border-r border-border">
       {/* Header */}
-      <div className="p-6 border-b border-gray-200">
-        <h1 className="text-xl font-bold text-gray-900">Legal Center</h1>
-        <p className="text-sm text-gray-600 mt-1">Policy Documentation</p>
+      <div className="p-6 border-b border-border">
+        <h1 className="text-2xl font-bold text-gradient mb-1">Hushh Legal</h1>
+        <p className="text-sm text-muted-foreground">Policy Documentation Center</p>
       </div>
 
       {/* Search */}
-      <div className="p-4 border-b border-gray-200">
+      <div className="p-4 border-b border-border">
         <div className="relative">
           <Input
             type="text"
             placeholder="Search policies..."
             value={searchQuery}
             onChange={(e) => handleSearch(e.target.value)}
-            className="pl-10"
+            className="pl-10 bg-card border-border focus:border-primary transition-colors"
           />
-          <Search className="absolute left-3 top-3 h-4 w-4 text-gray-400" />
+          <Search className="absolute left-3 top-3 h-4 w-4 text-muted-foreground" />
         </div>
 
         {/* Search Results */}
         {searchResults.length > 0 && (
-          <div className="mt-2 max-h-32 overflow-y-auto bg-gray-50 rounded-lg p-2">
+          <div className="mt-3 max-h-36 overflow-y-auto card-gradient rounded-lg p-3 space-y-2">
             {searchResults.map((result, index) => (
               <button
                 key={index}
                 onClick={() => handlePolicyChange(result.policy.type)}
-                className="w-full text-left p-2 hover:bg-white rounded text-xs"
+                className="w-full text-left p-3 hover:bg-accent rounded-lg transition-all duration-200 text-sm group"
               >
-                <div className="font-medium text-blue-600">{result.policy.title}</div>
-                <div className="text-gray-600 truncate">{result.context}</div>
-                <div className="text-gray-500">{result.matches} matches</div>
+                <div className="font-medium text-primary group-hover:text-primary/80">{result.policy.title}</div>
+                <div className="text-muted-foreground truncate mt-1">{result.context}</div>
+                <div className="text-xs text-muted-foreground/70 mt-1">{result.matches} matches found</div>
               </button>
             ))}
           </div>
@@ -105,7 +105,7 @@ export default function Sidebar({ currentPolicy, onPolicyChange, onClose }: Side
 
       {/* Navigation */}
       <nav className="flex-1 py-4">
-        <ul className="space-y-1 px-4">
+        <ul className="space-y-2 px-4">
           {policies?.map((policy) => {
             const IconComponent = policyIcons[policy.type as keyof typeof policyIcons];
             const isActive = currentPolicy === policy.type;
@@ -114,19 +114,19 @@ export default function Sidebar({ currentPolicy, onPolicyChange, onClose }: Side
               <li key={policy.type}>
                 <Button
                   variant={isActive ? "secondary" : "ghost"}
-                  className={`w-full justify-start h-auto py-3 px-4 ${
+                  className={`w-full justify-start h-auto py-4 px-4 rounded-xl transition-all duration-200 ${
                     isActive 
-                      ? "bg-blue-50 text-blue-600 border-l-4 border-blue-600" 
-                      : "text-gray-700 hover:bg-gray-100 hover:text-blue-600"
+                      ? "bg-primary/10 text-primary border-l-4 border-primary shadow-lg" 
+                      : "text-foreground hover:bg-accent hover:text-primary hover:scale-[1.02]"
                   }`}
                   onClick={() => handlePolicyChange(policy.type)}
                 >
                   {IconComponent && (
                     <IconComponent className={`w-5 h-5 mr-3 ${
-                      isActive ? "text-blue-600" : "text-gray-400"
+                      isActive ? "text-primary" : "text-muted-foreground"
                     }`} />
                   )}
-                  <span className="font-medium">{policy.title}</span>
+                  <span className="font-medium text-left">{policy.title}</span>
                 </Button>
               </li>
             );
@@ -135,10 +135,16 @@ export default function Sidebar({ currentPolicy, onPolicyChange, onClose }: Side
       </nav>
 
       {/* Footer */}
-      <div className="p-4 border-t border-gray-200 bg-white">
-        <p className="text-xs text-gray-500">
-          Last updated: <span className="font-medium">January 2024</span>
-        </p>
+      <div className="p-4 border-t border-border">
+        <div className="text-center">
+          <p className="text-xs text-muted-foreground mb-2">
+            Last updated: <span className="font-medium text-primary">May 26, 2025</span>
+          </p>
+          <div className="text-xs text-muted-foreground/70">
+            <div>info@hush1one.com</div>
+            <div>+14252969050</div>
+          </div>
+        </div>
       </div>
     </aside>
   );

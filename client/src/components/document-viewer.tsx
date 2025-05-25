@@ -201,49 +201,98 @@ export default function DocumentViewer({ policyType }: DocumentViewerProps) {
 
       {/* Document Footer */}
       <div className="border-t border-border pt-8 mt-16">
-        <Card className="card-gradient p-6">
-          <div className="flex flex-col md:flex-row justify-between items-start md:items-center">
-            <div className="mb-4 md:mb-0">
-              <p className="text-muted-foreground">
-                This document was last updated on{" "}
-                <span className="font-semibold text-primary">{policy.lastUpdated}</span>
-              </p>
-              <div className="mt-4 p-4 card-gradient rounded-lg">
-                <h4 className="text-sm font-semibold text-primary mb-2">Connect with Hushh</h4>
-                <p className="text-xs text-muted-foreground mb-3">Say something to reach out to us</p>
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-3 text-sm">
-                  <div className="flex items-center space-x-2">
-                    <span className="text-primary">✉</span>
-                    <span className="text-foreground">info@hush1one.com</span>
-                  </div>
-                  <div className="flex items-center space-x-2">
-                    <span className="text-primary">📞</span>
-                    <span className="text-foreground">+14252969050</span>
-                  </div>
-                  <div className="flex items-start space-x-2">
-                    <span className="text-primary">🌐</span>
-                    <div className="text-foreground">
-                      <div className="font-medium">Hushh.ai</div>
-                      <div className="text-muted-foreground text-xs">
-                        1021 5th St W, Kirkland, WA 98033
-                      </div>
-                    </div>
-                  </div>
-                </div>
+        <div className="grid lg:grid-cols-2 gap-6">
+          {/* Document Info */}
+          <Card className="card-gradient p-6">
+            <div className="flex items-center space-x-3 mb-4">
+              <div className="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center">
+                <IconComponent className="text-primary w-5 h-5" />
+              </div>
+              <div>
+                <h4 className="text-lg font-semibold text-foreground">Document Information</h4>
+                <p className="text-sm text-muted-foreground">Policy details and actions</p>
               </div>
             </div>
-            <div className="flex space-x-4">
-              <Button variant="outline" size="sm" className="border-primary/30 hover:bg-primary/10 transition-all duration-200">
+            
+            <div className="space-y-4">
+              <div className="flex items-center justify-between py-2 border-b border-border/50">
+                <span className="text-muted-foreground">Last Updated</span>
+                <span className="font-semibold text-primary">{policy.lastUpdated}</span>
+              </div>
+              <div className="flex items-center justify-between py-2 border-b border-border/50">
+                <span className="text-muted-foreground">Effective Date</span>
+                <span className="font-semibold text-foreground">{policy.effectiveDate}</span>
+              </div>
+              <div className="flex items-center justify-between py-2">
+                <span className="text-muted-foreground">Document Type</span>
+                <span className="font-semibold text-foreground">{policy.title}</span>
+              </div>
+            </div>
+
+            <div className="flex space-x-3 mt-6">
+              <Button variant="outline" size="sm" className="flex-1 border-primary/30 hover:bg-primary/10 transition-all duration-200 hover:scale-105">
                 <Printer className="w-4 h-4 mr-2" />
                 Print
               </Button>
-              <Button variant="outline" size="sm" className="border-primary/30 hover:bg-primary/10 transition-all duration-200">
+              <Button variant="outline" size="sm" className="flex-1 border-primary/30 hover:bg-primary/10 transition-all duration-200 hover:scale-105">
                 <Download className="w-4 h-4 mr-2" />
                 Download PDF
               </Button>
             </div>
-          </div>
-        </Card>
+          </Card>
+
+          {/* Contact Information */}
+          <Card className="card-gradient p-6">
+            <div className="flex items-center space-x-3 mb-4">
+              <div className="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center">
+                <span className="text-primary text-lg">🌐</span>
+              </div>
+              <div>
+                <h4 className="text-lg font-semibold text-primary">Connect with Hushh</h4>
+                <p className="text-sm text-muted-foreground">Say something to reach out to us</p>
+              </div>
+            </div>
+            
+            <div className="space-y-4">
+              {/* Email */}
+              <div className="flex items-center space-x-3 p-3 bg-background/20 rounded-lg hover:bg-background/40 transition-colors">
+                <div className="w-8 h-8 bg-primary/20 rounded-full flex items-center justify-center">
+                  <span className="text-primary text-sm">✉</span>
+                </div>
+                <div>
+                  <p className="text-xs text-muted-foreground">Email us</p>
+                  <p className="font-medium text-foreground">info@hush1one.com</p>
+                </div>
+              </div>
+
+              {/* Phone */}
+              <div className="flex items-center space-x-3 p-3 bg-background/20 rounded-lg hover:bg-background/40 transition-colors">
+                <div className="w-8 h-8 bg-primary/20 rounded-full flex items-center justify-center">
+                  <span className="text-primary text-sm">📞</span>
+                </div>
+                <div>
+                  <p className="text-xs text-muted-foreground">Call us</p>
+                  <p className="font-medium text-foreground">+14252969050</p>
+                </div>
+              </div>
+
+              {/* Website & Address */}
+              <div className="flex items-start space-x-3 p-3 bg-background/20 rounded-lg hover:bg-background/40 transition-colors">
+                <div className="w-8 h-8 bg-primary/20 rounded-full flex items-center justify-center mt-1">
+                  <span className="text-primary text-sm">📍</span>
+                </div>
+                <div>
+                  <p className="text-xs text-muted-foreground">Visit us</p>
+                  <p className="font-medium text-foreground">Hushh.ai</p>
+                  <p className="text-sm text-muted-foreground leading-relaxed">
+                    1021 5th St W<br />
+                    Kirkland, WA 98033
+                  </p>
+                </div>
+              </div>
+            </div>
+          </Card>
+        </div>
       </div>
     </div>
   );

@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { useLocation } from "wouter";
 import Sidebar from "@/components/sidebar";
 import DocumentViewer from "@/components/document-viewer";
+import AppShowcaseCarousel from "@/components/app-showcase-carousel";
 import { Button } from "@/components/ui/button";
 import { Menu } from "lucide-react";
 
@@ -55,7 +56,15 @@ export default function Home() {
           </div>
         </header>
 
-        <DocumentViewer policyType={currentPolicy} />
+        <div className="space-y-8">
+          {/* App Showcase Carousel */}
+          <div className="p-6">
+            <AppShowcaseCarousel />
+          </div>
+          
+          {/* Policy Document Viewer */}
+          <DocumentViewer policyType={currentPolicy} />
+        </div>
       </main>
     </div>
   );

@@ -105,9 +105,22 @@ export default function DocumentViewer({ policyType }: DocumentViewerProps) {
         return <h5 key={index} className="text-lg font-semibold text-foreground mb-3 mt-6">{line.replace('#### ', '')}</h5>;
       }
       if (line.startsWith('- ')) {
+        const listContent = line.replace('- ', '');
+        // Parse bold text in list items
+        const parts = listContent.split(/(\*\*.*?\*\*)/g);
+        
         return (
           <li key={index} className="text-muted-foreground mb-2 ml-6 relative before:content-['→'] before:absolute before:-left-4 before:text-primary">
-            {line.replace('- ', '')}
+            {parts.map((part, partIndex) => {
+              if (part.startsWith('**') && part.endsWith('**')) {
+                return (
+                  <strong key={partIndex} className="text-primary font-semibold">
+                    {part.replace(/\*\*/g, '')}
+                  </strong>
+                );
+              }
+              return part;
+            })}
           </li>
         );
       }
@@ -115,14 +128,29 @@ export default function DocumentViewer({ policyType }: DocumentViewerProps) {
         return <br key={index} />;
       }
       
-      // Handle links and emphasized text
-      const formattedLine = line
-        .replace(/\*\*(.*?)\*\*/g, '<strong class="text-primary font-semibold">$1</strong>')
-        .replace(/\*(.*?)\*/g, '<em class="text-foreground/90 italic">$1</em>');
+      // Handle bold and italic text in paragraphs
+      const parts = line.split(/(\*\*.*?\*\*|\*.*?\*)/g);
       
       return (
-        <p key={index} className="text-muted-foreground leading-relaxed mb-4 text-base" 
-           dangerouslySetInnerHTML={{ __html: formattedLine }} />
+        <p key={index} className="text-muted-foreground leading-relaxed mb-4 text-base">
+          {parts.map((part, partIndex) => {
+            if (part.startsWith('**') && part.endsWith('**')) {
+              return (
+                <strong key={partIndex} className="text-primary font-semibold">
+                  {part.replace(/\*\*/g, '')}
+                </strong>
+              );
+            }
+            if (part.startsWith('*') && part.endsWith('*') && !part.startsWith('**')) {
+              return (
+                <em key={partIndex} className="text-foreground/90 italic">
+                  {part.replace(/\*/g, '')}
+                </em>
+              );
+            }
+            return part;
+          })}
+        </p>
       );
     });
   };

@@ -92,53 +92,45 @@ For questions about these Terms, contact us at info@hush1one.com, call us at +14
         effectiveDate: "May 26, 2025",
         lastUpdated: "May 26, 2025",
         content: `
-# Non-Discrimination Policy
+# Hushone, Inc Non-Discrimination Policy
+
+At Hushone, Inc ("Hushone," "we," "us," or "our"), we strongly uphold principles of equality, fairness, and respect. We are committed to maintaining a workplace and services environment free from discrimination.
 
 ## Our Commitment
 
-At Hushone, Inc, we are committed to providing equal opportunities and maintaining a workplace and service environment free from discrimination and harassment. We believe in creating an inclusive environment for all users and employees.
+Hushone does not and will not discriminate on the basis of race, color, ethnicity, national origin, religion, age, disability, sex, gender identity or expression, sexual orientation, marital status, veteran status, socioeconomic background, or any other characteristic protected by applicable laws. This commitment extends to all employment decisions, customer interactions, and service provisions.
 
-## Policy Statement
+## Equal Opportunity Employer
 
-We prohibit discrimination based on race, color, religion, sex, national origin, age, disability, sexual orientation, gender identity, veteran status, or any other protected characteristic under applicable law.
+As an equal opportunity employer, we ensure that employment practices—including hiring, promotion, training, compensation, benefits, disciplinary action, and termination—are conducted based solely on merit, qualifications, and abilities relevant to job performance, without discrimination.
 
-## Scope of Policy
+## Inclusive Services
 
-This policy applies to all aspects of our services and employment practices, including:
+Our services, products, and platforms are accessible and inclusive. We provide equal access and fair treatment to all individuals, ensuring that no person faces exclusion or differential treatment based on protected characteristics.
 
-### Service Provision
-- Equal access to services for all users regardless of protected characteristics
-- Fair treatment in customer service and support
-- Accommodation for disabilities where reasonable and legally required
-- Respectful communication and interaction
+## Reporting and Enforcement
 
-### Employment Practices
-- Hiring and recruitment processes
-- Promotion and advancement opportunities
-- Compensation and benefits administration
-- Training and development programs
-- Workplace conduct and environment
+Any individual who believes they have experienced or witnessed discrimination within Hushone's workplace or services is strongly encouraged to report it promptly. Concerns can be raised confidentially by contacting us at:
 
-## Reporting Discrimination
+**Email:** info@hush1one.com
 
-If you experience or witness discrimination while using our services or in our workplace:
+**Address:** 1021 5th St W, Kirkland, WA 98033
 
-1. Report the incident to our legal team at privacy@hushh.ai
-2. Provide detailed information about the incident
-3. We will investigate promptly and confidentially
-4. No retaliation will be tolerated for good faith reports
+Hushone prohibits retaliation against anyone who, in good faith, reports discrimination or participates in investigations related to such reports. We commit to promptly investigating all reports and taking appropriate corrective actions when necessary.
 
-## Enforcement and Accountability
+## Continuous Improvement
 
-Violations of this policy may result in corrective action, up to and including termination of service access or employment, depending on the severity and circumstances of the violation.
+We continuously assess and improve our policies and practices to ensure alignment with our values of equality, diversity, and inclusion. Regular training and communication reinforce this commitment throughout our organization.
 
-## Training and Education
+## Contact Us
 
-We provide regular training on discrimination prevention and inclusive practices to ensure a respectful environment for all users and employees.
+For any questions or concerns regarding our Non-Discrimination Policy, please contact:
 
-## Contact Information
+**Email:** info@hush1one.com
 
-Report discrimination concerns or questions about this policy to info@hush1one.com, call us at +14252969050, or contact us at Hushh.ai, 1021 5th St W, Kirkland, WA 98033, USA.
+**Address:** 1021 5th St W, Kirkland, WA 98033
+
+At Hushone, we firmly believe in creating and sustaining an inclusive environment for all.
         `
       },
       {

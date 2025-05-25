@@ -169,10 +169,26 @@ export default function DocumentViewer({ policyType }: DocumentViewerProps) {
       </div>
 
       {/* Document Content */}
-      <div className="prose prose-lg max-w-none">
-        <Card className="card-gradient p-8 border-border/50">
-          <div className="space-y-6">
-            {formatContent(policy.content)}
+      <div className="max-w-none">
+        <Card className="card-gradient border-border/50 overflow-hidden">
+          {/* Content Header */}
+          <div className="bg-primary/5 border-b border-border/50 p-6">
+            <div className="flex items-center space-x-3">
+              <div className="w-8 h-8 bg-primary/20 rounded-lg flex items-center justify-center">
+                <IconComponent className="text-primary w-4 h-4" />
+              </div>
+              <div>
+                <h3 className="text-xl font-semibold text-foreground">Policy Document</h3>
+                <p className="text-sm text-muted-foreground">Complete {policy.title.toLowerCase()} content</p>
+              </div>
+            </div>
+          </div>
+          
+          {/* Document Body */}
+          <div className="p-8">
+            <div className="prose prose-lg max-w-none space-y-6">
+              {formatContent(policy.content)}
+            </div>
           </div>
         </Card>
       </div>

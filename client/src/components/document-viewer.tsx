@@ -12,7 +12,11 @@ import {
   Printer,
   Eye,
   Edit,
-  Trash2
+  Trash2,
+  Mail,
+  Phone,
+  MapPin,
+  Globe
 } from "lucide-react";
 import type { Policy } from "@shared/schema";
 
@@ -245,7 +249,7 @@ export default function DocumentViewer({ policyType }: DocumentViewerProps) {
           <Card className="card-gradient p-6">
             <div className="flex items-center space-x-3 mb-4">
               <div className="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center">
-                <span className="text-primary text-lg">🌐</span>
+                <Globe className="text-primary w-5 h-5" />
               </div>
               <div>
                 <h4 className="text-lg font-semibold text-primary">Connect with Hushh</h4>
@@ -255,35 +259,35 @@ export default function DocumentViewer({ policyType }: DocumentViewerProps) {
             
             <div className="space-y-4">
               {/* Email */}
-              <div className="flex items-center space-x-3 p-3 bg-background/20 rounded-lg hover:bg-background/40 transition-colors">
-                <div className="w-8 h-8 bg-primary/20 rounded-full flex items-center justify-center">
-                  <span className="text-primary text-sm">✉</span>
+              <div className="flex items-center space-x-3 p-3 bg-background/20 rounded-lg hover:bg-background/40 transition-colors cursor-pointer group">
+                <div className="w-8 h-8 bg-primary/20 rounded-full flex items-center justify-center group-hover:bg-primary/30 transition-colors">
+                  <Mail className="text-primary w-4 h-4" />
                 </div>
                 <div>
                   <p className="text-xs text-muted-foreground">Email us</p>
-                  <p className="font-medium text-foreground">info@hush1one.com</p>
+                  <p className="font-medium text-foreground group-hover:text-primary transition-colors">info@hush1one.com</p>
                 </div>
               </div>
 
               {/* Phone */}
-              <div className="flex items-center space-x-3 p-3 bg-background/20 rounded-lg hover:bg-background/40 transition-colors">
-                <div className="w-8 h-8 bg-primary/20 rounded-full flex items-center justify-center">
-                  <span className="text-primary text-sm">📞</span>
+              <div className="flex items-center space-x-3 p-3 bg-background/20 rounded-lg hover:bg-background/40 transition-colors cursor-pointer group">
+                <div className="w-8 h-8 bg-primary/20 rounded-full flex items-center justify-center group-hover:bg-primary/30 transition-colors">
+                  <Phone className="text-primary w-4 h-4" />
                 </div>
                 <div>
                   <p className="text-xs text-muted-foreground">Call us</p>
-                  <p className="font-medium text-foreground">+14252969050</p>
+                  <p className="font-medium text-foreground group-hover:text-primary transition-colors">+14252969050</p>
                 </div>
               </div>
 
               {/* Website & Address */}
-              <div className="flex items-start space-x-3 p-3 bg-background/20 rounded-lg hover:bg-background/40 transition-colors">
-                <div className="w-8 h-8 bg-primary/20 rounded-full flex items-center justify-center mt-1">
-                  <span className="text-primary text-sm">📍</span>
+              <div className="flex items-start space-x-3 p-3 bg-background/20 rounded-lg hover:bg-background/40 transition-colors cursor-pointer group">
+                <div className="w-8 h-8 bg-primary/20 rounded-full flex items-center justify-center mt-1 group-hover:bg-primary/30 transition-colors">
+                  <MapPin className="text-primary w-4 h-4" />
                 </div>
                 <div>
                   <p className="text-xs text-muted-foreground">Visit us</p>
-                  <p className="font-medium text-foreground">Hushh.ai</p>
+                  <p className="font-medium text-foreground group-hover:text-primary transition-colors">Hushh.ai</p>
                   <p className="text-sm text-muted-foreground leading-relaxed">
                     1021 5th St W<br />
                     Kirkland, WA 98033

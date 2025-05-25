@@ -2,7 +2,7 @@ import { useState } from "react";
 import { useQuery } from "@tanstack/react-query";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
-import { Search, FileText, Shield, CreditCard, Scale } from "lucide-react";
+import { Search, FileText, Shield, CreditCard, Scale, Mail, Phone, MapPin } from "lucide-react";
 import { useLocation } from "wouter";
 import type { Policy } from "@shared/schema";
 
@@ -148,18 +148,18 @@ export default function Sidebar({ currentPolicy, onPolicyChange, onClose }: Side
             <p className="text-xs text-muted-foreground mb-3">Say something to reach out to us</p>
             
             <div className="space-y-2 text-xs">
-              <div className="flex items-center space-x-2">
-                <span className="text-primary">✉</span>
-                <span className="text-foreground font-medium">info@hush1one.com</span>
+              <div className="flex items-center space-x-2 group cursor-pointer">
+                <Mail className="text-primary w-3 h-3 group-hover:scale-110 transition-transform" />
+                <span className="text-foreground font-medium group-hover:text-primary transition-colors">info@hush1one.com</span>
               </div>
-              <div className="flex items-center space-x-2">
-                <span className="text-primary">📞</span>
-                <span className="text-foreground font-medium">+14252969050</span>
+              <div className="flex items-center space-x-2 group cursor-pointer">
+                <Phone className="text-primary w-3 h-3 group-hover:scale-110 transition-transform" />
+                <span className="text-foreground font-medium group-hover:text-primary transition-colors">+14252969050</span>
               </div>
-              <div className="flex items-start space-x-2 mt-3">
-                <span className="text-primary">🌐</span>
+              <div className="flex items-start space-x-2 mt-3 group cursor-pointer">
+                <MapPin className="text-primary w-3 h-3 mt-0.5 group-hover:scale-110 transition-transform" />
                 <div className="text-foreground">
-                  <div className="font-medium">Hushh.ai</div>
+                  <div className="font-medium group-hover:text-primary transition-colors">Hushh.ai</div>
                   <div className="text-muted-foreground text-xs leading-relaxed">
                     1021 5th St W<br />
                     Kirkland, WA 98033

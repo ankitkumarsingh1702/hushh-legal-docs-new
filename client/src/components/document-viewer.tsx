@@ -167,8 +167,6 @@ export default function DocumentViewer({ policyType }: DocumentViewerProps) {
           <div>
             <h1 className="text-4xl font-bold text-gradient mb-3">{policy.title}</h1>
             <p className="text-muted-foreground text-lg">
-              Effective Date: <span className="font-semibold text-primary">{policy.effectiveDate}</span>
-              <span className="mx-3">•</span>
               Last Updated: <span className="font-semibold text-primary">{formatRealTimeDate()}</span>
             </p>
           </div>
@@ -267,10 +265,6 @@ export default function DocumentViewer({ policyType }: DocumentViewerProps) {
               <div className="flex items-center justify-between py-2 border-b border-border/50">
                 <span className="text-muted-foreground">Last Updated</span>
                 <span className="font-semibold text-primary">{formatRealTimeDate()}</span>
-              </div>
-              <div className="flex items-center justify-between py-2 border-b border-border/50">
-                <span className="text-muted-foreground">Effective Date</span>
-                <span className="font-semibold text-foreground">{policy.effectiveDate}</span>
               </div>
               <div className="flex items-center justify-between py-2">
                 <span className="text-muted-foreground">Document Type</span>

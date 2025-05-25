@@ -82,7 +82,7 @@ Our liability is limited to the maximum extent permitted by law. We are not liab
 
 ## Contact Information
 
-For questions about these Terms, contact us at privacy@hushh.ai or at our address: 1021 5th St W, Kirkland, WA 98033, USA.
+For questions about these Terms, contact us at info@hush1one.com, call us at +14252969050, or visit us at Hushh.ai, 1021 5th St W, Kirkland, WA 98033, USA.
         `
       },
       {
@@ -138,7 +138,7 @@ We provide regular training on discrimination prevention and inclusive practices
 
 ## Contact Information
 
-Report discrimination concerns or questions about this policy to privacy@hushh.ai or contact us at 1021 5th St W, Kirkland, WA 98033, USA.
+Report discrimination concerns or questions about this policy to info@hush1one.com, call us at +14252969050, or contact us at Hushh.ai, 1021 5th St W, Kirkland, WA 98033, USA.
         `
       },
       {
@@ -211,7 +211,7 @@ You are responsible for all applicable taxes, duties, and government fees relate
 
 ## Contact Information
 
-For billing questions, payment issues, or refund requests, please contact us at privacy@hushh.ai or write to us at 1021 5th St W, Kirkland, WA 98033, USA.
+For billing questions, payment issues, or refund requests, please contact us at info@hush1one.com, call us at +14252969050, or write to us at Hushh.ai, 1021 5th St W, Kirkland, WA 98033, USA.
         `
       },
       {
@@ -289,7 +289,7 @@ You have full control over your personal data, including rights to:
 - Object or restrict specific data processing activities
 - Withdraw consent where applicable
 
-To exercise your privacy rights, contact us at privacy@hushh.ai or via our dedicated privacy webpage.
+To exercise your privacy rights, contact us at info@hush1one.com, call us at +14252969050, or visit our website Hushh.ai.
 
 ## International Data Transfers
 
@@ -315,7 +315,9 @@ We regularly update this Privacy Policy to reflect our data practices clearly. W
 
 If you have any questions regarding our privacy practices or this Privacy Policy, please contact us:
 
-- **Email:** privacy@hushh.ai
+- **Email:** info@hush1one.com
+- **Phone:** +14252969050
+- **Website:** Hushh.ai
 - **Address:** 1021 5th St W, Kirkland, WA 98033, USA
 
 Your privacy is fundamental to Hushone, and we remain committed to transparency and integrity in managing your data.

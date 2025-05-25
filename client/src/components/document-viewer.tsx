@@ -124,11 +124,11 @@ export default function DocumentViewer({ policyType }: DocumentViewerProps) {
   };
 
   return (
-    <div className="max-w-5xl mx-auto p-6 lg:p-8">
+    <div className="max-w-5xl mx-auto p-6 lg:p-8 fade-in">
       {/* Document Header */}
       <div className="mb-10">
         <div className="flex items-center mb-6">
-          <div className="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center mr-6 shadow-lg">
+          <div className="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center mr-6 shadow-lg pulse-glow">
             <IconComponent className="text-primary w-8 h-8" />
           </div>
           <div>
@@ -208,9 +208,29 @@ export default function DocumentViewer({ policyType }: DocumentViewerProps) {
                 This document was last updated on{" "}
                 <span className="font-semibold text-primary">{policy.lastUpdated}</span>
               </p>
-              <p className="text-sm text-muted-foreground/70 mt-2">
-                For questions: <span className="text-primary">info@hush1one.com</span> | <span className="text-primary">+14252969050</span>
-              </p>
+              <div className="mt-4 p-4 card-gradient rounded-lg">
+                <h4 className="text-sm font-semibold text-primary mb-2">Connect with Hushh</h4>
+                <p className="text-xs text-muted-foreground mb-3">Say something to reach out to us</p>
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-3 text-sm">
+                  <div className="flex items-center space-x-2">
+                    <span className="text-primary">✉</span>
+                    <span className="text-foreground">info@hush1one.com</span>
+                  </div>
+                  <div className="flex items-center space-x-2">
+                    <span className="text-primary">📞</span>
+                    <span className="text-foreground">+14252969050</span>
+                  </div>
+                  <div className="flex items-start space-x-2">
+                    <span className="text-primary">🌐</span>
+                    <div className="text-foreground">
+                      <div className="font-medium">Hushh.ai</div>
+                      <div className="text-muted-foreground text-xs">
+                        1021 5th St W, Kirkland, WA 98033
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
             <div className="flex space-x-4">
               <Button variant="outline" size="sm" className="border-primary/30 hover:bg-primary/10 transition-all duration-200">

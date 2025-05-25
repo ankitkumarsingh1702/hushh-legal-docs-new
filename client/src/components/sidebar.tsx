@@ -87,12 +87,12 @@ export default function Sidebar({ currentPolicy, onPolicyChange, onClose }: Side
 
         {/* Search Results */}
         {searchResults.length > 0 && (
-          <div className="mt-3 max-h-36 overflow-y-auto card-gradient rounded-lg p-3 space-y-2">
+          <div className="mt-3 max-h-36 overflow-y-auto card-gradient rounded-lg p-3 space-y-2 fade-in">
             {searchResults.map((result, index) => (
               <button
                 key={index}
                 onClick={() => handlePolicyChange(result.policy.type)}
-                className="w-full text-left p-3 hover:bg-accent rounded-lg transition-all duration-200 text-sm group"
+                className="w-full text-left p-3 hover:bg-accent rounded-lg transition-all duration-200 text-sm group hover:scale-[1.02]"
               >
                 <div className="font-medium text-primary group-hover:text-primary/80">{result.policy.title}</div>
                 <div className="text-muted-foreground truncate mt-1">{result.context}</div>
@@ -136,13 +136,37 @@ export default function Sidebar({ currentPolicy, onPolicyChange, onClose }: Side
 
       {/* Footer */}
       <div className="p-4 border-t border-border">
-        <div className="text-center">
-          <p className="text-xs text-muted-foreground mb-2">
-            Last updated: <span className="font-medium text-primary">May 26, 2025</span>
-          </p>
-          <div className="text-xs text-muted-foreground/70">
-            <div>info@hush1one.com</div>
-            <div>+14252969050</div>
+        <div className="space-y-3">
+          <div className="text-center">
+            <p className="text-xs text-muted-foreground">
+              Last updated: <span className="font-medium text-primary">May 26, 2025</span>
+            </p>
+          </div>
+          
+          <div className="card-gradient p-4 rounded-lg">
+            <h4 className="text-sm font-semibold text-primary mb-3">Connect with Hushh</h4>
+            <p className="text-xs text-muted-foreground mb-3">Say something to reach out to us</p>
+            
+            <div className="space-y-2 text-xs">
+              <div className="flex items-center space-x-2">
+                <span className="text-primary">✉</span>
+                <span className="text-foreground font-medium">info@hush1one.com</span>
+              </div>
+              <div className="flex items-center space-x-2">
+                <span className="text-primary">📞</span>
+                <span className="text-foreground font-medium">+14252969050</span>
+              </div>
+              <div className="flex items-start space-x-2 mt-3">
+                <span className="text-primary">🌐</span>
+                <div className="text-foreground">
+                  <div className="font-medium">Hushh.ai</div>
+                  <div className="text-muted-foreground text-xs leading-relaxed">
+                    1021 5th St W<br />
+                    Kirkland, WA 98033
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>

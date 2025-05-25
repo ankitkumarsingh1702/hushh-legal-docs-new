@@ -18,6 +18,7 @@ import {
   MapPin,
   Globe
 } from "lucide-react";
+import { formatRealTimeDate } from "@/lib/utils";
 import type { Policy } from "@shared/schema";
 
 interface DocumentViewerProps {
@@ -168,7 +169,7 @@ export default function DocumentViewer({ policyType }: DocumentViewerProps) {
             <p className="text-muted-foreground text-lg">
               Effective Date: <span className="font-semibold text-primary">{policy.effectiveDate}</span>
               <span className="mx-3">•</span>
-              Last Updated: <span className="font-semibold text-primary">{policy.lastUpdated}</span>
+              Last Updated: <span className="font-semibold text-primary">{formatRealTimeDate()}</span>
             </p>
           </div>
         </div>
@@ -265,7 +266,7 @@ export default function DocumentViewer({ policyType }: DocumentViewerProps) {
             <div className="space-y-4">
               <div className="flex items-center justify-between py-2 border-b border-border/50">
                 <span className="text-muted-foreground">Last Updated</span>
-                <span className="font-semibold text-primary">{policy.lastUpdated}</span>
+                <span className="font-semibold text-primary">{formatRealTimeDate()}</span>
               </div>
               <div className="flex items-center justify-between py-2 border-b border-border/50">
                 <span className="text-muted-foreground">Effective Date</span>

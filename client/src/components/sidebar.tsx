@@ -4,6 +4,7 @@ import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { Search, FileText, Shield, CreditCard, Scale, Mail, Phone, MapPin } from "lucide-react";
 import { useLocation } from "wouter";
+import { formatRealTimeDate } from "@/lib/utils";
 import type { Policy } from "@shared/schema";
 
 interface SidebarProps {
@@ -139,7 +140,7 @@ export default function Sidebar({ currentPolicy, onPolicyChange, onClose }: Side
         <div className="space-y-3">
           <div className="text-center">
             <p className="text-xs text-muted-foreground">
-              Last updated: <span className="font-medium text-primary">May 26, 2025</span>
+              Last updated: <span className="font-medium text-primary">{formatRealTimeDate()}</span>
             </p>
           </div>
           

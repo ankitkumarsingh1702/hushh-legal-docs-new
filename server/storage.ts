@@ -30,26 +30,31 @@ export class MemStorage implements IStorage {
         type: "terms-of-service",
         title: "Terms of Service",
         icon: "fas fa-file-contract",
-        effectiveDate: "January 1, 2024",
-        lastUpdated: "January 1, 2024",
+        effectiveDate: "May 26, 2025",
+        lastUpdated: "May 26, 2025",
         content: `
-# Introduction
+# Terms of Service
 
-These Terms of Service ("Terms") govern your use of our services. By accessing or using our services, you agree to be bound by these Terms.
+## Introduction
+
+By entering information, I agree to Hushh's Terms of Service, Non-discrimination Policy and Payments Terms of Service and acknowledge the Privacy Policy.
+
+These Terms of Service ("Terms") govern your use of Hushone, Inc's services. By accessing or using our services, you agree to be bound by these Terms.
 
 ## Acceptance of Terms
 
-By entering information, I agree to these Terms of Service, our Non-discrimination Policy and Payment Terms of Service and acknowledge our Privacy Policy.
+By creating an account or using our services, you acknowledge that you have read, understood, and agree to be bound by these Terms and our Privacy Policy.
 
 ## Use of Services
 
-You may use our services only in compliance with these Terms and all applicable laws and regulations.
+You may use our services only in compliance with these Terms and all applicable laws and regulations. Our services are designed to provide you with secure and personalized experiences.
 
 ### Permitted Uses
 
 - Access and use services for lawful purposes
 - Create an account with accurate information
 - Comply with all applicable laws and regulations
+- Use services in accordance with their intended functionality
 
 ### Prohibited Uses
 
@@ -57,235 +62,263 @@ You may use our services only in compliance with these Terms and all applicable 
 - Infringe on intellectual property rights
 - Engage in fraudulent or deceptive practices
 - Upload malicious software or content
+- Attempt to gain unauthorized access to our systems
 
 ## Account Responsibilities
 
-You are responsible for maintaining the confidentiality of your account credentials and for all activities that occur under your account.
+You are responsible for maintaining the confidentiality of your account credentials and for all activities that occur under your account. You must notify us immediately of any unauthorized use of your account.
+
+## Data and Privacy
+
+Your privacy and data security are our highest priorities. We never sell your personal data and strictly manage your information responsibly and securely in accordance with our Privacy Policy.
 
 ## Service Availability
 
-We strive to maintain service availability but cannot guarantee uninterrupted access. We reserve the right to modify or discontinue services with notice.
+We strive to maintain service availability but cannot guarantee uninterrupted access. We reserve the right to modify or discontinue services with reasonable notice.
 
 ## Limitation of Liability
 
-Our liability is limited to the maximum extent permitted by law. We are not liable for indirect, incidental, or consequential damages.
+Our liability is limited to the maximum extent permitted by law. We are not liable for indirect, incidental, or consequential damages arising from your use of our services.
 
 ## Contact Information
 
-For questions about these Terms, contact us at legal@company.com or (555) 123-4567.
+For questions about these Terms, contact us at privacy@hushh.ai or at our address: 1021 5th St W, Kirkland, WA 98033, USA.
         `
       },
       {
         type: "non-discrimination",
         title: "Non-Discrimination Policy",
         icon: "fas fa-balance-scale",
-        effectiveDate: "December 15, 2023",
-        lastUpdated: "December 15, 2023",
+        effectiveDate: "May 26, 2025",
+        lastUpdated: "May 26, 2025",
         content: `
 # Non-Discrimination Policy
 
-We are committed to providing equal opportunities and maintaining a workplace free from discrimination and harassment.
-
 ## Our Commitment
 
-We prohibit discrimination based on race, color, religion, sex, national origin, age, disability, sexual orientation, gender identity, or any other protected characteristic.
+At Hushone, Inc, we are committed to providing equal opportunities and maintaining a workplace and service environment free from discrimination and harassment. We believe in creating an inclusive environment for all users and employees.
+
+## Policy Statement
+
+We prohibit discrimination based on race, color, religion, sex, national origin, age, disability, sexual orientation, gender identity, veteran status, or any other protected characteristic under applicable law.
 
 ## Scope of Policy
 
-This policy applies to all aspects of our services and employment, including:
+This policy applies to all aspects of our services and employment practices, including:
 
 ### Service Provision
-- Equal access to services for all users
-- Fair treatment regardless of protected characteristics
-- Accommodation for disabilities where reasonable
+- Equal access to services for all users regardless of protected characteristics
+- Fair treatment in customer service and support
+- Accommodation for disabilities where reasonable and legally required
+- Respectful communication and interaction
 
 ### Employment Practices
-- Hiring and recruitment
+- Hiring and recruitment processes
 - Promotion and advancement opportunities
-- Compensation and benefits
-- Training and development
+- Compensation and benefits administration
+- Training and development programs
+- Workplace conduct and environment
 
 ## Reporting Discrimination
 
-If you experience or witness discrimination:
+If you experience or witness discrimination while using our services or in our workplace:
 
-1. Report the incident to our legal team
+1. Report the incident to our legal team at privacy@hushh.ai
 2. Provide detailed information about the incident
 3. We will investigate promptly and confidentially
 4. No retaliation will be tolerated for good faith reports
 
-## Enforcement
+## Enforcement and Accountability
 
-Violations of this policy may result in corrective action, up to and including termination of service or employment.
+Violations of this policy may result in corrective action, up to and including termination of service access or employment, depending on the severity and circumstances of the violation.
 
 ## Training and Education
 
-We provide regular training on discrimination prevention and inclusive practices to ensure a respectful environment for all.
+We provide regular training on discrimination prevention and inclusive practices to ensure a respectful environment for all users and employees.
 
 ## Contact Information
 
-Report discrimination concerns to legal@company.com or call our confidential hotline at (555) 123-4567.
+Report discrimination concerns or questions about this policy to privacy@hushh.ai or contact us at 1021 5th St W, Kirkland, WA 98033, USA.
         `
       },
       {
         type: "payment-terms",
-        title: "Payment Terms of Service",
+        title: "Payments Terms of Service",
         icon: "fas fa-credit-card",
-        effectiveDate: "January 10, 2024",
-        lastUpdated: "January 10, 2024",
+        effectiveDate: "May 26, 2025",
+        lastUpdated: "May 26, 2025",
         content: `
-# Payment Terms of Service
+# Payments Terms of Service
 
-These Payment Terms govern all financial transactions and billing practices for our services.
+## Introduction
+
+These Payment Terms govern all financial transactions and billing practices for Hushone, Inc services. By using our paid services, you agree to these payment terms.
 
 ## Payment Methods
 
-We accept the following payment methods:
+We accept the following payment methods to ensure convenient and secure transactions:
 
 ### Accepted Payment Types
-- Major credit cards (Visa, MasterCard, American Express)
-- Debit cards
-- Bank transfers (ACH)
+- Major credit cards (Visa, MasterCard, American Express, Discover)
+- Debit cards with credit card logos
 - Digital payment platforms (PayPal, Apple Pay, Google Pay)
+- Bank transfers (ACH) for eligible accounts
+- Other payment methods as we may offer from time to time
 
 ## Billing and Charges
 
 ### Subscription Services
 - Charges are billed in advance for subscription periods
-- Billing cycles are monthly or annually as selected
-- Prices are subject to change with 30 days notice
+- Billing cycles may be monthly, quarterly, or annually as selected
+- All prices are listed in USD unless otherwise specified
+- Prices are subject to change with 30 days advance notice
 
 ### One-Time Purchases
-- Payment is required at time of purchase
-- All sales are final unless otherwise specified
-- Refunds are processed according to our refund policy
+- Payment is required at the time of purchase
+- All sales are final unless otherwise specified in our refund policy
+- Digital products are delivered immediately upon successful payment
 
-## Payment Processing
+## Payment Processing and Security
 
-### Authorization
-- You authorize us to charge your selected payment method
-- You must provide accurate billing information
-- You are responsible for maintaining current payment information
+### Authorization and Security
+- You authorize us to charge your selected payment method for applicable fees
+- You must provide accurate and current billing information
+- We use industry-standard security measures to protect payment information
+- Payment processing is handled by certified third-party payment processors
 
-### Failed Payments
-- Service may be suspended for failed payments
-- Late fees may apply for overdue accounts
-- We will attempt to collect payment before service termination
+### Failed Payments and Account Status
+- Service may be suspended for failed or declined payments
+- We will attempt to notify you of payment failures
+- Late fees may apply for overdue accounts as permitted by law
+- We reserve the right to terminate services for continued payment failures
 
 ## Refunds and Cancellations
 
 ### Subscription Cancellations
-- Cancel anytime through your account settings
+- You may cancel your subscription at any time through your account settings
 - Cancellations take effect at the end of the current billing period
-- No partial refunds for unused subscription time
+- No partial refunds for unused subscription time unless required by law
 
-### Refund Requests
-- Request refunds within 30 days of purchase
-- Refunds are processed to the original payment method
-- Processing time is 5-10 business days
+### Refund Policy
+- Refund requests must be submitted within 30 days of the original transaction
+- Refunds are processed to the original payment method when possible
+- Processing time for refunds is typically 5-10 business days
+- Certain digital products may have different refund terms
 
-## Taxes
+## Taxes and Fees
 
-You are responsible for all applicable taxes related to your use of our services.
+You are responsible for all applicable taxes, duties, and government fees related to your use of our services, unless we are legally required to collect such taxes.
 
 ## Contact Information
 
-For billing questions, contact billing@company.com or (555) 123-4567.
+For billing questions, payment issues, or refund requests, please contact us at privacy@hushh.ai or write to us at 1021 5th St W, Kirkland, WA 98033, USA.
         `
       },
       {
         type: "privacy-policy",
         title: "Privacy Policy",
         icon: "fas fa-shield-alt",
-        effectiveDate: "January 15, 2024",
-        lastUpdated: "January 15, 2024",
+        effectiveDate: "May 26, 2025",
+        lastUpdated: "May 26, 2025",
         content: `
-# Privacy Policy
+# Hushone, Inc Privacy Policy
 
-This Privacy Policy describes how we collect, use, and protect your personal information when you use our services.
+At Hushone, Inc ("Hushone," "we," "our," or "us"), your privacy and data security are our highest priorities. This Privacy Policy clearly explains how we collect, use, and safeguard your personal data. Importantly, we never sell your personal data and strictly manage your information responsibly and securely.
 
-## Introduction
+## What is Personal Data?
 
-By entering information, I agree to our Terms of Service, Non-discrimination Policy and Payment Terms of Service and acknowledge this Privacy Policy.
-
-We are committed to protecting your privacy and ensuring the security of your personal information. This policy explains what information we collect, how we use it, and your rights regarding your data.
+Personal data refers to any information that identifies or can reasonably identify an individual, such as names, email addresses, device identifiers, or financial details.
 
 ## Information We Collect
 
-### Personal Information
+We collect personal data essential for delivering and improving our services. This includes:
 
-We collect information you provide directly to us, such as when you create an account, make a purchase, or contact us for support.
+### Information You Provide
 
-#### Types of Information Collected:
-- Name and contact information
-- Account credentials and preferences
-- Payment and billing information
-- Communication history and support requests
+- Account and profile details
+- Payment and billing data
+- Content you share via our services
+- Communications and support requests
 
-### Automatically Collected Information
+### Information Collected Automatically
 
-We automatically collect certain information about your device and how you interact with our services, including:
-- IP address and location data
-- Browser type and version
-- Usage patterns and preferences
-- Device characteristics
+- Device identifiers and usage patterns
+- Location information (as per your device settings)
+- Cookies and similar technologies to enhance user experience
+- Log data and analytics information
+
+### Information from Third Parties
+
+- Data from verified partners and publicly available resources
+- Data you authorize third parties to share with us
+- Information from social media platforms when you connect accounts
 
 ## How We Use Your Information
 
-### Service Operation
-To provide, maintain, and improve our services, process transactions, and provide customer support.
+We responsibly use your personal data for:
 
-### Communication
-To send you service-related notifications, updates, and respond to your inquiries.
+### Service Delivery
+Providing and improving products and services, ensuring personalization, functionality, and user satisfaction.
+
+### Communications
+Informing you about updates, transactions, security alerts, and customer support.
+
+### Security and Fraud Prevention
+Protecting you, Hushone, and our services against fraudulent and illegal activities.
 
 ### Legal Compliance
-We process your personal information based on legitimate business interests, legal compliance requirements, and with your consent where required by law.
+Complying with applicable laws, regulations, and legal obligations.
 
-## Information Sharing and Disclosure
+## Sharing Your Information
 
-**Important:** We do not sell, trade, or otherwise transfer your personal information to third parties without your explicit consent, except as described in this policy.
+Your personal data is shared only in the following limited circumstances:
 
-### When We May Share Information
-- With service providers who assist in our operations
-- To comply with legal obligations or protect our rights
-- In connection with a business transfer or merger
-- With your explicit consent for specific purposes
+- **Service Providers:** With authorized service providers who strictly handle your data on our behalf under contractual obligations to ensure privacy
+- **Legal Requirements:** When mandated by law or to protect legal rights
+- **Business Transfers:** In cases of mergers or acquisitions, data transfer occurs under strict confidentiality and security protocols
+
+We explicitly state that Hushone does not sell or share personal data for third-party marketing purposes as defined by applicable laws, including those of Nevada and California.
 
 ## Your Rights and Choices
 
-You have the following rights regarding your personal information:
+You have full control over your personal data, including rights to:
 
-### Access
-View the personal information we have about you
+### Access and Control
+- Access and update your data via account settings
+- Request data deletion, subject to certain limitations such as legal compliance obligations
+- Object or restrict specific data processing activities
+- Withdraw consent where applicable
 
-### Correct
-Update or correct your personal information
+To exercise your privacy rights, contact us at privacy@hushh.ai or via our dedicated privacy webpage.
 
-### Delete
-Request deletion of your personal data
+## International Data Transfers
 
-### Portability
-Request a copy of your data in a portable format
+As a global company, data may be transferred internationally in compliance with strict data protection laws and frameworks such as Standard Contractual Clauses and APEC Privacy guidelines, ensuring data protection at all times.
 
-To exercise any of these rights, please contact us using the information provided below. We will respond to your request within 30 days.
+## Security Measures
 
-## Data Security
+We implement rigorous security measures—administrative, technical, and physical—to protect your data from unauthorized access, misuse, or disclosure. Security practices are continually updated and reviewed.
 
-We implement appropriate technical and organizational measures to protect your personal information against unauthorized access, alteration, disclosure, or destruction.
+## Children's Privacy
 
-## Data Retention
+Our services do not intentionally target individuals under 13 years of age (or applicable legal age). We enforce strict measures to protect children's privacy and require verified parental consent for child accounts.
 
-We retain your personal information only as long as necessary to fulfill the purposes outlined in this policy, unless a longer retention period is required by law.
+## Cookies and Technologies
 
-## Contact Information
+We utilize cookies and similar technologies solely to improve functionality, analyze usage, and enhance security. You have options to manage or disable cookies through your browser settings.
 
-If you have any questions about this Privacy Policy or our data practices, please contact us:
+## Policy Updates
 
-- Email: privacy@company.com
-- Phone: (555) 123-4567
-- Address: 123 Business St, City, State 12345
+We regularly update this Privacy Policy to reflect our data practices clearly. We will notify you of significant changes and seek your consent as required by law.
 
-This document was last updated on January 15, 2024.
+## Contact Us
+
+If you have any questions regarding our privacy practices or this Privacy Policy, please contact us:
+
+- **Email:** privacy@hushh.ai
+- **Address:** 1021 5th St W, Kirkland, WA 98033, USA
+
+Your privacy is fundamental to Hushone, and we remain committed to transparency and integrity in managing your data.
         `
       }
     ];
